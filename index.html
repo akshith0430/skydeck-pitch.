@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkyDeck x Akshith CA | Social media pitch</title>
+<meta name="description" content="A pitch to run SkyDeck by Sherlock's social media, end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#080b1c;--deep:#121738;--dusk:#1f2557;--amber:#ffb23e;--pink:#ff3d81;--mint:#5df2c3;--ink:#f3f1ff;--mute:#a9a8c9;
+--d:'Unbounded','Trebuchet MS',sans-serif;--b:'Manrope',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ink);font:400 1.05rem/1.65 var(--b);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin:auto}
+section{padding:clamp(64px,10vw,120px) 0}
+h1,h2,h3{font-family:var(--d);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4.6vw,3.2rem);max-width:18ch;margin-bottom:1.2rem}
+p.lead{color:var(--mute);max-width:56ch;font-size:1.12rem}
+.btn{display:inline-block;padding:.95rem 1.6rem;border-radius:99px;background:var(--amber);color:#1a1200;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px var(--amber)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid #ffffff55}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 4%;background:linear-gradient(#080b1ccc,#080b1c00)}
+nav b{font-family:var(--d);font-size:.95rem}
+nav a.btn{padding:.55rem 1.1rem;font-size:.9rem}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;padding:120px 0 64px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:url(images/stage.jpg) center 30%/cover;z-index:-2;filter:saturate(1.15)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#080b1c55 0%,#080b1c99 45%,var(--night) 100%)}
+.hero h1{font-size:clamp(2.6rem,9.5vw,7rem);max-width:11ch}
+.hero h1 span{display:block;opacity:0;transform:translateY(40px);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2){animation-delay:.18s;color:var(--amber)}
+.hero h1 span:nth-child(3){animation-delay:.36s}
+@keyframes up{to{opacity:1;transform:none}}
+.hero p{margin:1.4rem 0 2rem;max-width:46ch;font-size:1.2rem;color:#d9d7f3;opacity:0;animation:up .9s .6s forwards}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:up .9s .75s forwards}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:2.4rem}
+.chips i{font-style:normal;font-size:.88rem;padding:.4rem .9rem;border:1px solid #ffffff33;border-radius:99px;background:#080b1c88;backdrop-filter:blur(6px)}
+
+/* facts */
+.facts{background:var(--deep)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:2.4rem}
+.fact{padding:1.6rem;border-radius:20px;background:var(--dusk)}
+.fact b{display:block;font-family:var(--d);font-size:1.7rem;color:var(--amber);margin-bottom:.4rem}
+.fact span{color:var(--mute);font-size:.98rem}
+.gap{margin-top:2.4rem;padding:1.6rem 1.8rem;border-left:4px solid var(--pink);background:#ff3d8114;border-radius:0 16px 16px 0;max-width:70ch}
+
+/* services */
+.svc{display:grid;gap:0;margin-top:2rem}
+.svc div{display:grid;grid-template-columns:minmax(150px,.7fr) 2fr;gap:20px;padding:1.3rem 0;border-top:1px solid #ffffff22}
+.svc div:last-child{border-bottom:1px solid #ffffff22}
+.svc h3{font-size:1.05rem}
+.svc p{color:var(--mute)}
+@media(max-width:620px){.svc div{grid-template-columns:1fr;gap:4px}}
+
+/* week */
+.week{background:linear-gradient(var(--night),var(--deep))}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:2.4rem}
+.day{padding:1.2rem;border-radius:18px;background:var(--dusk);border-top:4px solid var(--c);transition:transform .25s}
+.day:hover{transform:translateY(-6px)}
+.day h3{font-size:1rem;margin-bottom:.3rem}
+.day small{display:block;color:var(--c);font-weight:700;margin-bottom:.5rem}
+.day p{font-size:.92rem;color:var(--mute);line-height:1.5}
+
+/* work */
+.work{display:grid;gap:20px;grid-template-columns:1.3fr 1fr;margin-top:2.4rem;align-items:stretch}
+.work figure{position:relative;border-radius:22px;overflow:hidden;min-height:340px}
+.work figure img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.work figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.5rem 1.4rem 1.2rem;background:linear-gradient(#0000,#080b1ce6);font-size:.95rem}
+.stack{display:grid;gap:20px}
+.links{display:grid;gap:12px;margin-top:2rem}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:1.2rem 1.4rem;border-radius:16px;background:var(--dusk);text-decoration:none;transition:background .2s,transform .2s}
+.links a:hover{background:#2c3380;transform:translateX(6px)}
+.links b{font-family:var(--d);font-size:1rem}
+.links span{color:var(--mute);font-size:.92rem}
+@media(max-width:760px){.work{grid-template-columns:1fr}}
+
+/* plan */
+.plan{background:var(--deep)}
+.steps{display:grid;gap:16px;margin-top:2.4rem;counter-reset:s}
+.step{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:1.4rem;border-radius:18px;background:var(--dusk)}
+.step::before{counter-increment:s;content:"Week " counter(s);font-family:var(--d);font-size:.95rem;color:var(--mint)}
+.step h3{font-size:1.05rem;margin-bottom:.25rem}
+.step p{color:var(--mute)}
+
+/* team */
+.team{display:grid;gap:40px;grid-template-columns:minmax(220px,360px) 1fr;align-items:center}
+.team img{border-radius:26px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.roles{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+.roles i{font-style:normal;padding:.5rem 1rem;border-radius:99px;background:var(--dusk);font-size:.95rem}
+@media(max-width:760px){.team{grid-template-columns:1fr}}
+
+/* contact */
+.contact{text-align:center;position:relative;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;background:url(images/sign.jpg) center/cover;opacity:.22;z-index:-1}
+.contact h2{margin:0 auto 1rem;max-width:14ch}
+.contact p.lead{margin:0 auto 2.2rem}
+.card{max-width:520px;margin:0 auto;padding:2rem;border-radius:26px;background:#121738ee;border:1px solid #ffffff2a;text-align:left}
+.card h3{font-size:1.3rem;margin-bottom:1.2rem}
+.card a.line{display:flex;gap:14px;align-items:center;padding:.9rem 0;border-top:1px solid #ffffff1f;text-decoration:none;word-break:break-word}
+.card a.line small{color:var(--mute);min-width:64px}
+.card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.4rem}
+footer{padding:28px 0;text-align:center;color:var(--mute);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.hero h1 span,.hero p,.hero .row{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><b>SkyDeck x Akshith CA</b><a class="btn" href="#contact">Talk to us</a></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1><span>Fill the</span><span>rooftop.</span><span>Every night.</span></h1>
+    <p>A full-service social media team for SkyDeck by Sherlock's. We shoot it, post it, promote it and answer every DM, so you can run the night.</p>
+    <div class="row"><a class="btn" href="#plan">See the plan</a><a class="btn ghost" href="#contact">Contact Akshith</a></div>
+    <div class="chips"><i>Reels and photography</i><i>Event promotion</i><i>Community management</i><i>Paid ads</i></div>
+  </div>
+</header>
+
+<section class="facts">
+  <div class="wrap">
+    <h2>SkyDeck already has the goods</h2>
+    <p class="lead">The venue does the hard part. Our job is to make sure the whole city sees it before they pick tonight's plan.</p>
+    <div class="grid">
+      <div class="fact"><b>4.1</b><span>Google rating across 8,800+ reviews</span></div>
+      <div class="fact"><b>2:30 AM</b><span>One of the latest rooftop closing times on MG Road, Wednesday to Friday</span></div>
+      <div class="fact"><b>0.07 km</b><span>From MG Road Metro. Easy to reach, easy to say yes to</span></div>
+      <div class="fact"><b>2021</b><span>Times Hospitality Icons winner for ambience and views</span></div>
+    </div>
+    <div class="gap"><b>The opportunity:</b> DJ nights, live sport, band nights, the New Year gala and 360° skyline views are happening every week. They deserve a feed that sells them with consistent, scroll-stopping content, not occasional posts.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Everything your social media needs</h2>
+    <p class="lead">One team, one voice, one monthly plan. No juggling freelancers.</p>
+    <div class="svc">
+      <div><h3>Content creation</h3><p>On-site photo and video shoots: skyline shots, cocktails, food, crowds, DJs and bands.</p></div>
+      <div><h3>Reels and stories</h3><p>Short, fast, trend-aware edits built for reach, plus daily stories that show what is happening right now.</p></div>
+      <div><h3>Event promotion</h3><p>Teasers, countdowns, posters and recaps for every match day, party night and special event.</p></div>
+      <div><h3>Community management</h3><p>Fast replies to comments and DMs, table-booking enquiries, and review responses.</p></div>
+      <div><h3>Collabs and influencers</h3><p>Bengaluru creators and local pages invited for shoots that bring in fresh audiences.</p></div>
+      <div><h3>Ads and analytics</h3><p>Targeted Instagram campaigns for walk-ins and bookings, with a clear monthly report on what worked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="week">
+  <div class="wrap">
+    <h2>A week on the SkyDeck feed</h2>
+    <p class="lead">A sample rhythm we would tune with your team. Every day has a reason to post and a reason to visit.</p>
+    <div class="days">
+      <div class="day" style="--c:#5df2c3"><h3>Monday</h3><small>Sundowner deals</small><p>Golden hour skyline reel with the happy hour offer.</p></div>
+      <div class="day" style="--c:#ffb23e"><h3>Tuesday</h3><small>Plate of the week</small><p>Close-up food and cocktail shots with a booking link.</p></div>
+      <div class="day" style="--c:#ff3d81"><h3>Wednesday</h3><small>Midweek party</small><p>Late-night teaser: open till 2:30 AM, DJ lineup revealed.</p></div>
+      <div class="day" style="--c:#5df2c3"><h3>Thursday</h3><small>Throwback and tease</small><p>Best crowd moments from last week, plus the weekend preview.</p></div>
+      <div class="day" style="--c:#ffb23e"><h3>Friday</h3><small>Live night</small><p>Stories all evening: band, DJ, dance floor, countdown to close.</p></div>
+      <div class="day" style="--c:#ff3d81"><h3>Saturday</h3><small>Big screen</small><p>Match day graphics, seat-your-squad posts, crowd reactions.</p></div>
+      <div class="day" style="--c:#5df2c3"><h3>Sunday</h3><small>Recap</small><p>Weekend highlight reel and a customer spotlight.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>We already run nights like yours</h2>
+    <p class="lead">Packed crowds, stage lights, and content that has to move fast. Here is some of what we have covered, and the pages we manage.</p>
+    <div class="work">
+      <figure><img src="images/stage.jpg" alt="Host on stage at a large live event with colourful lights" loading="lazy"><figcaption>On stage and on the ground: live event coverage at Sunburn</figcaption></figure>
+      <div class="stack">
+        <figure><img src="images/sign.jpg" alt="Sunburn festival sign at dusk" loading="lazy"><figcaption>Behind the scenes, golden hour to after dark</figcaption></figure>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/prerana.bengaluru" target="_blank" rel="noopener"><div><b>Prerana Bengaluru</b><br><span>Events and community on Instagram</span></div><span>View page</span></a>
+      <a href="https://www.instagram.com/sainrityanilayam" target="_blank" rel="noopener"><div><b>Sai Nrityanilayam</b><br><span>Dance academy: performances and promotion</span></div><span>View page</span></a>
+      <a href="https://www.instagram.com/shore.gitam" target="_blank" rel="noopener"><div><b>Shore Gitam</b><br><span>Campus fest brand and content</span></div><span>View page</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="plan">
+  <div class="wrap">
+    <h2>Your first 30 days</h2>
+    <p class="lead">We start fast, so you see the difference on your feed within the first month.</p>
+    <div class="steps">
+      <div class="step"><div></div><div><h3>Audit and shoot day</h3><p>Review your current page, competitors and best-performing posts. Run our first full on-site shoot.</p></div></div>
+      <div class="step"><div></div><div><h3>Launch the content calendar</h3><p>Daily stories, 3 to 4 reels and posts a week, and a fresh look for highlights and bio.</p></div></div>
+      <div class="step"><div></div><div><h3>Promote and collaborate</h3><p>First creator collab, event campaigns and a small ad test to find what drives walk-ins.</p></div></div>
+      <div class="step"><div></div><div><h3>Report and refine</h3><p>Reach, follower growth, enquiries and bookings reviewed with you, then the next month planned.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap team">
+    <img src="images/akshith.jpg" alt="Portrait of Akshith CA" loading="lazy">
+    <div>
+      <h2>Led by Akshith CA</h2>
+      <p class="lead">Akshith leads a small, hands-on team of creators who live and work around Bengaluru's events scene. You get one point of contact, quick turnarounds and a team that shows up on the night.</p>
+      <div class="roles"><i>Photographers</i><i>Videographers</i><i>Video editors</i><i>Graphic designers</i><i>Copywriters</i><i>Community managers</i></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's put SkyDeck on every screen</h2>
+    <p class="lead">Give us one month. We will bring the plan, the team and the content.</p>
+    <div class="card">
+      <h3>Akshith CA</h3>
+      <a class="line" href="tel:+918319733858"><small>Call</small>+91 83197 33858</a>
+      <a class="line" href="https://wa.me/918319733858?text=Hi%20Akshith%2C%20I%20saw%20the%20SkyDeck%20pitch." target="_blank" rel="noopener"><small>WhatsApp</small>+91 83197 33858</a>
+      <a class="line" href="mailto:akshith0430@gmail.com"><small>Email</small>akshith0430@gmail.com</a>
+      <div class="row"><a class="btn" href="https://wa.me/918319733858?text=Hi%20Akshith%2C%20I%20saw%20the%20SkyDeck%20pitch." target="_blank" rel="noopener">Message on WhatsApp</a><a class="btn ghost" href="tel:+918319733858">Call now</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>A proposal for SkyDeck by Sherlock's, MG Road, Bengaluru</footer>
+</body>
+</html>
